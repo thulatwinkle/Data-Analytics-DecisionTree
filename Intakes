@@ -1,0 +1,54 @@
+the process of building a predictive model, namely a decision tree.
+
+The pipeline consists of several steps:
+
+Exploratory Data Analysis (EDA) - understanding the data and the underlying interactions between the different variables
+Data Pre-processing - preparing the data for modelling
+Building the model
+Evaluating the performance of the model, and possibly fine-tune and tweak it if necessary
+
+Numpy:
+Linear algebra(array)
+
+Pandas:
+dataframes and importing csv files
+
+dataframes.head():
+returns the first 5 rows of dataset
+
+Access datframe elements with conditions
+print("Number of men survived",len(train[train["Survived"]==1 & (train["Sex"]=="male")]))
+
+Lambda:
+single line function
+used instead of def
+ lambda parameter: return_value => def double(x):
+                                      return 2*x
+                                => lambda x:2*x
+                                
+ 
+ lambda if-else => lambda x,y:x if x>y else y =>returns max(x,y)
+ 
+Pandas Apply:
+Applies function to the series of dataframe
+df.apply(functionname)
+
+Pandas series and dataframes:
+Series:
+A Series is a one-dimensional object that can hold any data type such as integers, floats and strings.
+series = df[coln1]
+A DataFrame is a two dimensional object that can have columns with potential different types. Different kind of inputs include dictionaries, lists, series, and even another DataFrame.
+df = df[[coln1,coln2]] => 2 or more columns
+
+Plotting:
+Y => answer column
+x=> all other relevant data => df.drop("Ycoln",axis = 1) // axis-0 removes index, 1 removes column
+                                   
+                                   
+Training the Model:
+To build the model, split the samples into two
+  1. train dataset
+  2. test dataset
+  
+  from sklearn.model_selection import train_test_split
+  x_train,x_test,y_train,y_test = train_test_split(x,y,test_size = Percentageofsamples, random_state= first 10 samples)
