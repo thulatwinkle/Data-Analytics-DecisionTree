@@ -1,4 +1,4 @@
-# Data-Analytics-Projects1
+# Titanic Survival prediction using Decision Tree
 
 #Titanic
 
